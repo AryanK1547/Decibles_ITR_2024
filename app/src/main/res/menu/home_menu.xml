@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <item
+        android:id="@+id/itMenuMyLocation"
+        android:title="My Location"
+        android:icon="@drawable/location_asset_n"
+        app:showAsAction="always"
+        />
+
+        <item
+            android:id="@+id/itMenuMyProfie"
+            android:icon="@drawable/profile_asset"
+            android:title="My Profile"
+            android:visible="true"
+            app:showAsAction="ifRoom" />
+        <item
+            android:id="@+id/itMenuAboutUs"
+            android:icon="@drawable/aboutus_asset"
+            android:title="About Us"
+            android:visible="true"
+            app:showAsAction="never" />
+
+
+    <item
+            android:id="@+id/itMenuSettings"
+            android:icon="@drawable/settings_asset"
+            android:title="Settings"
+            android:visible="true"
+            app:showAsAction="never" />
+    <item
+            android:id="@+id/itMenuNotify"
+            android:icon="@drawable/notification_asset"
+            android:title="Notifications"
+            android:visible="true"
+            app:showAsAction="always" />
+    <item
+            android:id="@+id/itMenuFeedback"
+            android:icon="@drawable/feedback_asset"
+            android:title="Feedback"
+            android:visible="true"
+            app:showAsAction="never" />
+    <item
+
+            android:id="@+id/itMenuLogOut"
+            android:icon="@drawable/logout_asset"
+            android:title="Logout"
+            android:visible="true"
+            app:showAsAction="never" />
+
+
+
+
+
+</menu>

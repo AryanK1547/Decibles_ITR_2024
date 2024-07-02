@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_gradient_background"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:rotation="0"
+    android:rotationX="0"
+    tools:context=".SplashActivity">
+
+
+   <ImageView
+       android:id="@+id/ivMainLogo"
+       android:layout_width="250dp"
+       android:layout_height="250dp"
+       android:layout_gravity="center"
+       android:src="@drawable/new_logo_8" />
+
+   <TextView
+       android:id="@+id/tvMainCmpName"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:fontFamily="@font/aclonica"
+       android:gravity="center"
+       android:text="@string/comp_name"
+       android:textColor="@color/white"
+       android:textSize="35sp"
+       android:textStyle="bold" />
+
+   <TextView
+       android:id="@+id/tvMainCmpslg"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_gravity="end"
+       android:layout_marginEnd="50dp"
+       android:fontFamily="cursive"
+       android:text="@string/comp_slg"
+       android:textColor="@color/yellow"
+       android:textSize="23sp"
+       android:textStyle="bold" />
+   <com.airbnb.lottie.LottieAnimationView
+       android:layout_width="250dp"
+       android:layout_height="150dp"
+       android:layout_marginTop="150dp"
+       app:lottie_rawRes="@raw/loading_dot"
+       app:lottie_autoPlay="true"
+       app:lottie_loop="true"/>
+
+
+</LinearLayout>

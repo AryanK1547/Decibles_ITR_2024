@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Decibels</string>
+    <string name="comp_name">Alpha Studios</string>
+    <string name="comp_slg">Quality Audio Solutions</string>
+    <string name="login_msg">Welcome to Login Page</string>
+    <string name="username_text">Type Your Username</string>
+    <string name="password_text">Type Your Password</string>
+    <string name="not_a_member_signup">Not a member? SignUp</string>
+    <string name="login">Login</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="Login_Title">Login</string>
+    <string name="SignIn_Title">Sign-In</string>
+    <string name="already_a_member">Already a member ?</string>
+    <string name="signin_btn">Sign-In</string>
+    <string name="or_signin_with">or SignIn with</string>
+    <string name="set_minimum_8_character_password">Set Minimum 8 Character Password</string>
+    <string name="set_username">Set Username</string>
+    <string name="your_contact_number">Your Contact Number</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lehraDo">Lehra Do</string>
+    <string name="saayiaa">Saaiyaan</string>
+    <string name="behtihawasa">Behti Hawa Sa Tha Vo </string>
+    <string name="suriliakhiyowale">Surili Akhiyo Wale</string>
+
+     <string name="artistlehraDo">Pritam, Arjit Singh</string>
+    <string name="artistsaayiaa">Rahat Fateh Ali Khan</string>
+    <string name="artistbehtihawasa">Shaan </string>
+    <string name="artistsuriliakhiyowale">Rahat Fateh Ali Khan</string>
+    <string name="india_s_classical">India\'s Classical</string>
+    <string name="aryan_khode">Aryan Khode</string>
+</resources>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ProfileActivity"
+    android:gravity="center"
+    android:background="@drawable/splash_gradient_background">
+
+<androidx.cardview.widget.CardView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cvLoginCrd"
+        app:cardElevation="24dp"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="@color/white"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+    android:backgroundTint="@color/white"
+
+    >
+
+
+     <LinearLayout
+
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical"
+         android:gravity="center"
+         >
+
+
+         <TextView
+             android:id="@+id/tvProfileTitle"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="Profile"
+             android:gravity="center"
+             android:textSize="35sp"
+             android:layout_marginBottom="20dp"
+             android:layout_marginTop="20dp"
+             android:textColor="@color/red"
+             android:textStyle="bold"
+             android:fontFamily="@font/aclonica"/>
+         <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/logo_main_round"
+        android:layout_gravity="center"
+         />
+         <TextView
+        android:id="@+id/profileUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DeciblesAdmin"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+             />
+
+       <TextView
+        android:id="@+id/profileEmial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="demo123@gmail.com"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+           />
+
+
+
+
+
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:orientation="horizontal">
+
+
+
+         </LinearLayout>
+
+         <androidx.appcompat.widget.AppCompatButton
+             android:id="@+id/etLoginBtn"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Edit Profile"
+             android:textColor="@color/white"
+             android:background="@drawable/login_btn_shape"
+             android:elevation="240dp"
+             android:layout_marginTop="15dp"
+             android:layout_marginBottom="15dp"
+
+
+             />
+
+
+     </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

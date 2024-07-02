@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LoginActivity"
+    android:gravity="center"
+android:background="@drawable/login_gradient_background"
+>
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/ivLoginLogo"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/new_logo_8"
+        />
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cvLoginCrd"
+        app:cardElevation="24dp"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="@color/white"
+        android:layout_gravity="center"
+        android:layout_margin="20dp">
+
+
+     <LinearLayout
+
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical"
+         android:gravity="center">
+
+
+         <TextView
+             android:id="@+id/tvLoginTitle"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="@string/Login_Title"
+             android:gravity="center"
+             android:textSize="35sp"
+             android:layout_marginBottom="20dp"
+             android:layout_marginTop="20dp"
+             android:textColor="@color/black"
+             android:textStyle="bold"
+             android:fontFamily="@font/aclonica"/>
+
+         <TextView
+             android:id="@+id/tvLoginCheck"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:focusable="true"
+             android:text="@string/not_a_member_signup"
+             android:textSize="15sp"
+             android:layout_marginStart="22dp"
+             android:clickable="true"
+             android:layout_gravity="left"
+             android:textColor="@color/black_shade"
+             android:fontFamily="@font/alatsi"
+             />
+
+
+
+
+         <EditText
+                android:id="@+id/etLoginUsername"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_margin="10dp"
+                android:hint="@string/username_text"
+                android:drawableStart="@drawable/username_asset"
+                android:inputType="text"
+                android:background="@drawable/edt_bg_shape"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+
+                />
+
+         <EditText
+             android:id="@+id/etLoginPswd"
+             android:layout_width="match_parent"
+             android:layout_height="49dp"
+             android:layout_margin="10dp"
+             android:background="@drawable/edt_bg_shape"
+             android:drawableStart="@drawable/password_asset"
+             android:hint="@string/password_text"
+             android:inputType="textPassword"
+             android:paddingStart="15dp"
+             android:paddingEnd="15dp"
+
+             />
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:orientation="horizontal">
+
+             <CheckBox
+                 android:id="@+id/cbPass"
+                 android:layout_width="150dp"
+                 android:layout_height="25dp"
+                 android:text="Show Password"
+                 android:textColor="@color/black_shade"
+                 android:fontFamily="@font/alatsi"
+                 app:buttonTint="@color/red"
+                 />
+
+             <TextView
+                 android:id="@+id/etLoginFgtPwd"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:focusable="true"
+                 android:text="@string/forgot_password"
+                 android:layout_marginLeft="90dp"
+
+                 android:clickable="true"
+                 android:textColor="@color/black_shade"
+                 android:fontFamily="@font/alatsi"/>
+         </LinearLayout>
+
+         <androidx.appcompat.widget.AppCompatButton
+             android:id="@+id/etLoginBtn"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="@string/login"
+             android:textColor="@color/white"
+             android:background="@drawable/login_btn_shape"
+             android:elevation="240dp"
+             android:layout_marginTop="15dp"
+
+
+             />
+         <TextView
+             android:id="@+id/tvLoginOR"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="or login with"
+             android:textColor="@color/black"
+             android:fontFamily="@font/alatsi"
+             android:layout_marginTop="10dp"
+             android:gravity="center" />
+
+         <LinearLayout
+             android:id="@+id/loginLayoutInside"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginBottom="13dp"
+             >
+             <ImageButton
+                 android:id="@+id/ibLoginGoogle"
+                 android:layout_width="50dp"
+                 android:layout_height="50dp"
+                 android:src="@drawable/google"
+                 android:scaleType="centerInside"
+                 android:background="@drawable/round_imagebtn_shape"
+                 android:layout_marginTop="20dp"
+                 android:layout_marginEnd="20dp"
+                 android:elevation="24dp"
+
+                 />
+
+             <ImageButton
+                 android:id="@+id/ibLoginMicro"
+                 android:layout_width="50dp"
+                 android:layout_height="50dp"
+                 android:layout_marginTop="20dp"
+                 android:background="@drawable/round_imagebtn_shape"
+                 android:scaleType="centerInside"
+                 android:src="@drawable/microsoft"
+                 android:elevation="24dp"/>
+
+         </LinearLayout>
+
+
+     </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>

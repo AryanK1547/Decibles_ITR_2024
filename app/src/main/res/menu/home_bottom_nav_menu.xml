@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+   <item
+            android:id="@+id/itHomeBottomNavSearch"
+            android:icon="@drawable/v_search_empty"
+            android:title="Search"
+           />
+        <item
+            android:id="@+id/itHomeBottomNavBrowse"
+            android:icon="@drawable/aboutus_asset"
+            android:title="Browse"
+             />
+<item
+            android:id="@+id/itHomeBottomNavBlank"
+            android:title=""
+             />
+    <item
+            android:id="@+id/itHomeBottomNavRadio"
+            android:icon="@drawable/radio_asset"
+            android:title="Radio"
+             />
+    <item
+            android:id="@+id/itHomeBottomNavYrLibrary"
+            android:icon="@drawable/library_asset"
+            android:title="Your Library"
+            />
+</menu>

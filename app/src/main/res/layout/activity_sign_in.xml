@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/signIn"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LoginActivity"
+    android:gravity="center_horizontal"
+    android:background="@drawable/login_gradient_background"
+    android:scrollbars="vertical"
+    >
+  <ImageView
+
+      android:layout_width="100dp"
+      android:layout_height="100dp"
+      android:id="@+id/ivLoginLogo"
+      android:layout_gravity="center_horizontal"
+      android:src="@drawable/new_logo_8"
+      />
+
+  <androidx.cardview.widget.CardView
+
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/cvLoginCrd"
+      app:cardElevation="24dp"
+      app:cardCornerRadius="20dp"
+      app:cardBackgroundColor="@color/white"
+      android:layout_gravity="center"
+      android:layout_margin="20dp"
+      >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:scrollbarThumbVertical="@color/black">
+
+
+      <TextView
+          android:id="@+id/tvLoginTitle"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/SignIn_Title"
+          android:gravity="center"
+          android:textSize="35sp"
+          android:layout_marginBottom="20dp"
+          android:layout_marginTop="20dp"
+          android:textColor="@color/black"
+          android:textStyle="bold"
+          android:fontFamily="@font/aclonica"/>
+
+      <TextView
+          android:id="@+id/tvSignInCheck"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:focusable="true"
+          android:text="@string/already_a_member"
+          android:textSize="15sp"
+          android:layout_marginStart="22dp"
+          android:clickable="true"
+          android:layout_gravity="left"
+          android:textColor="@color/black_shade"
+          android:fontFamily="@font/alatsi"
+          />
+      <EditText
+          android:id="@+id/etSignInFirstName"
+          android:layout_width="match_parent"
+          android:layout_height="49dp"
+          android:layout_margin="10dp"
+          android:hint="Enter Your First Name"
+          android:drawableStart="@drawable/username_asset"
+          android:textSize="15sp"
+          android:inputType="text"
+          android:background="@drawable/edt_bg_shape"
+          android:paddingStart="15dp"
+          android:paddingEnd="15dp"
+          />
+      <EditText
+          android:id="@+id/etSignInLastName"
+          android:layout_width="match_parent"
+          android:layout_height="49dp"
+          android:layout_margin="10dp"
+          android:hint="Enter Your Last Name"
+          android:drawableStart="@drawable/username_asset"
+          android:textSize="15sp"
+          android:inputType="text"
+          android:background="@drawable/edt_bg_shape"
+          android:paddingStart="15dp"
+          android:paddingEnd="15dp"
+
+          />
+      <EditText
+          android:id="@+id/etSignInEmail"
+          android:layout_width="match_parent"
+          android:layout_height="49dp"
+          android:layout_margin="10dp"
+          android:background="@drawable/edt_bg_shape"
+          android:drawableStart="@drawable/email_asset"
+          android:hint="example@gmail.com"
+          android:inputType="textEmailAddress"
+          android:paddingStart="15dp"
+          android:paddingEnd="15dp"
+          android:textSize="15sp"
+
+          />
+
+
+      <EditText
+          android:id="@+id/etSignInPhone"
+          android:layout_width="match_parent"
+          android:layout_height="49dp"
+          android:layout_margin="10dp"
+          android:layout_marginLeft="15dp"
+          android:background="@drawable/edt_bg_shape"
+          android:drawableStart="@drawable/contact_asset"
+          android:hint="@string/your_contact_number"
+          android:inputType="number"
+          android:paddingStart="15dp"
+          android:paddingEnd="15dp"
+          android:textSize="15sp"
+          android:maxLength="10"/>
+
+
+
+
+
+      <EditText
+          android:id="@+id/etSignInUsername"
+          android:layout_width="match_parent"
+          android:layout_height="49dp"
+          android:layout_margin="10dp"
+          android:hint="@string/set_username"
+          android:drawableStart="@drawable/username_asset"
+          android:textSize="15sp"
+          android:inputType="text"
+          android:background="@drawable/edt_bg_shape"
+          android:paddingStart="15dp"
+          android:paddingEnd="15dp"
+
+          />
+
+
+      <EditText
+          android:id="@+id/etSignInPswd"
+          android:layout_width="match_parent"
+          android:layout_height="49dp"
+          android:layout_margin="10dp"
+          android:hint="@string/set_minimum_8_character_password"
+          android:textSize="15sp"
+          android:drawableStart="@drawable/password_asset"
+          android:inputType="textPassword"
+          android:background="@drawable/edt_bg_shape"
+          android:paddingStart="15dp"
+          android:paddingEnd="15dp"
+
+          />
+      <CheckBox
+          android:id="@+id/cbSignInPass"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Show Password"
+          android:textColor="@color/black_shade"
+          android:fontFamily="@font/alatsi"
+          app:buttonTint="@color/red"
+
+          android:layout_gravity="left"
+          android:layout_marginStart="15dp"
+          />
+
+
+
+      <androidx.appcompat.widget.AppCompatButton
+          android:id="@+id/etSignInBtn"
+          android:layout_width="150dp"
+          android:layout_height="wrap_content"
+          android:text="@string/signin_btn"
+          android:textColor="@color/white"
+          android:background="@drawable/login_btn_shape"
+          android:elevation="240dp"
+          android:layout_marginTop="20dp"
+
+
+          />
+      <TextView
+          android:id="@+id/tvSignInOR"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/or_signin_with"
+          android:textColor="@color/black"
+          android:fontFamily="@font/alatsi"
+          android:layout_marginTop="10dp"
+          android:gravity="center" />
+
+      <LinearLayout
+          android:id="@+id/SignInLayoutInside"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="10dp"
+          >
+        <ImageButton
+            android:id="@+id/ibSignInGoogle"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/google"
+            android:scaleType="centerInside"
+            android:background="@drawable/round_imagebtn_shape"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:elevation="24dp"
+
+            />
+
+        <ImageButton
+            android:id="@+id/ibSignInMicro"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/round_imagebtn_shape"
+            android:scaleType="centerInside"
+            android:src="@drawable/microsoft"
+            android:elevation="24dp"/>
+
+      </LinearLayout>
+
+
+    </LinearLayout>
+
+    </ScrollView>
+  </androidx.cardview.widget.CardView>
+
+
+
+
+</LinearLayout>
