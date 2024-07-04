@@ -54,17 +54,43 @@
             app:layout_constraintTop_toBottomOf="@id/track_title"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
+
           <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="45dp"
                 android:layout_marginTop="16dp">
+              <SeekBar
+
+              android:id="@+id/volume_seekbar"
+              android:layout_width="150dp"
+              android:layout_height="10dp"
+              android:layout_marginTop="8dp"
+              android:progressDrawable="@drawable/progress_seekbar"
+              android:thumb="@drawable/thumb_seekbar_color"
+              android:max="100"
+                android:progress="100"
+                  android:layout_marginLeft="15dp"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toTopOf="parent"
+        />
+              <ImageView
+                    android:id="@+id/song_volume_button"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/volume_asset_white"
+
+
+
+                  app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                  android:clickable="true"/>
           <TextView
               android:id="@+id/tvInitialTime"
               android:layout_width="0dp"
               android:layout_height="wrap_content"
               android:text="00:00"
               android:textColor="@color/white"
-              android:layout_marginTop="16dp"
+              android:layout_marginTop="30dp"
               app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
              />
@@ -73,7 +99,7 @@
                   android:id="@+id/tvTotalTime"
                   android:layout_width="0dp"
                   android:layout_height="wrap_content"
-                  android:layout_marginTop="16dp"
+                  android:layout_marginTop="30dp"
                   app:layout_constraintEnd_toEndOf="parent"
                   app:layout_constraintTop_toTopOf="parent"
                   android:text="00:00"
@@ -107,23 +133,27 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent">
 
+              <ImageView
+                    android:id="@+id/song_lyrics_button"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/song_lyrics_asset"
+                    android:layout_marginLeft="10sp" />
+
 
                 <ImageView
                     android:id="@+id/skip_previous_button"
-                    android:layout_width="50dp"
+                    android:layout_width="45dp"
                     android:layout_height="50dp"
-
                     android:src="@drawable/skip_previous_asset"
-
                     android:layout_marginLeft="10sp" />
+
                 <ImageView
                     android:id="@+id/seconds_backward_btn"
-                    android:layout_width="50dp"
+                    android:layout_width="45dp"
                     android:layout_height="50dp"
                     android:src="@drawable/seconds_back_asset"
-
                     android:layout_marginLeft="10sp" />
-
 
                 <ImageButton
                     android:id="@+id/play_button"
@@ -135,7 +165,7 @@
 
                  <ImageView
                     android:id="@+id/seconds_forward_btn"
-                    android:layout_width="50dp"
+                    android:layout_width="45dp"
                     android:layout_height="50dp"
                     android:src="@drawable/seconds_forward_asset"
 
@@ -143,14 +173,21 @@
 
                 <ImageView
                     android:id="@+id/skip_next_button"
-                    android:layout_width="50dp"
+                    android:layout_width="45dp"
                     android:layout_height="50dp"
                     android:src="@drawable/skip_next_asset"
                     android:layout_marginLeft="10sp" />
 
-
+               <ImageView
+                    android:id="@+id/loop_song_button"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/song_loop_asset"
+                    android:layout_marginLeft="10sp"
+                   android:clickable="true"/>
 
             </LinearLayout>
+
        </LinearLayout>
 
 

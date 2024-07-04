@@ -4,7 +4,7 @@
     <item>
         <shape android:shape="oval">
             <solid android:color="@color/white"/> <!-- Replace with your desired color -->
-            <size android:width="17dp" android:height="17dp"/>
+            <size android:width="15dp" android:height="15dp"/>
         </shape>
     </item>
 

@@ -9,6 +9,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
+
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -26,9 +27,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
+
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -128,6 +127,8 @@ public class Home extends AppCompatActivity implements  BottomNavigationView.OnN
 
         homeBtn=findViewById(R.id.itfloatingbtnHome);
         homeBtn.setBackgroundColor(Color.TRANSPARENT);
+
+
         homeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -148,24 +149,19 @@ public class Home extends AppCompatActivity implements  BottomNavigationView.OnN
         });
     }
     private void showWelcomeAlertBox() {
-        // Inflate the custom layout
         LayoutInflater inflater = getLayoutInflater();
         View customView = inflater.inflate(R.layout.welcome_firstuser_alertbox, null);
 
-        // Create the alert dialog with the custom theme
         AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.MyAlertDialogTheme);
         builder.setView(customView);
 
-        // Create the alert dialog
         AlertDialog alertDialog = builder.create();
 
-        // Show the dialog before setting width
         alertDialog.show();
 
-        // Set the width to match_parent
         alertDialog.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
 
-        // Set click listener for the positive button
+
         Button positiveButton = customView.findViewById(R.id.positiveButton);
         positiveButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -174,7 +170,8 @@ public class Home extends AppCompatActivity implements  BottomNavigationView.OnN
                 alertDialog.dismiss();
             }
         });
-    }public void showLogoutAlertBox(){
+    }
+    public void showLogoutAlertBox(){
          LayoutInflater inflater = getLayoutInflater();
         View customView = inflater.inflate(R.layout.logout_alertbox, null);
 
@@ -220,8 +217,8 @@ public class Home extends AppCompatActivity implements  BottomNavigationView.OnN
         RadioFragment radioFragment =new RadioFragment();
         YourLibraryFragment libraryFragment =new YourLibraryFragment();
 
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item){
+            @Override
+             public boolean onNavigationItemSelected(@NonNull MenuItem item){
 
             if(item.getItemId()== R.id.itHomeBottomNavSearch){
                 getSupportFragmentManager().beginTransaction().replace(R.id.frameLayoutHome,searchFragment).commit();
@@ -235,7 +232,8 @@ public class Home extends AppCompatActivity implements  BottomNavigationView.OnN
               else if(item.getItemId()== R.id.itHomeBottomNavRadio){
                 getSupportFragmentManager().beginTransaction().replace(R.id.frameLayoutHome,radioFragment).commit();
             }
-return true;}}
+            return true;}}
+
 
 
 
