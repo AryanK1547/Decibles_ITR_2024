@@ -41,6 +41,7 @@ public class Home extends AppCompatActivity implements  BottomNavigationView.OnN
     FloatingActionButton homeBtn;
 
 
+
    boolean doubleTap =false;
     @Override
     public void onBackPressed() {
