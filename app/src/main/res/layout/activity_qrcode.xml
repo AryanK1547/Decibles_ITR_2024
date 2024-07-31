@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".QRcodeActivity"
+    android:background="@drawable/qr_red_black">
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Want
+
+        Decibles Premium?"
+        android:gravity="center"
+        android:textSize="55sp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:fontFamily="@font/aclonica" />
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Scan this QR"
+        android:gravity="center"
+        android:textSize="35sp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:fontFamily="@font/aclonica" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="350sp"
+        android:layout_height="350sp"
+        app:cardCornerRadius="50sp"
+
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/ivQRcode"
+            android:layout_width="340dp"
+            android:layout_height="340dp"
+            android:src="@drawable/logo_monochrome"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+
+            />
+    </com.google.android.material.card.MaterialCardView>
+
+
+</LinearLayout>

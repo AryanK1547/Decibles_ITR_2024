@@ -1,8 +1,10 @@
 package com.example.myapplication;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
 import android.view.View;
@@ -22,17 +24,23 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class SignInActivity extends AppCompatActivity {
+
     private TextView AccBtn;
-    private EditText FirstName,LastName,username,password,contact,email;
-    private ImageButton google_btn,microsoft_btn;
+    private EditText FirstName, LastName, username, password, contact, email;
+    private ImageButton google_btn, microsoft_btn;
     private CheckBox passwordSignIn;
-    private int flag=1;
+
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_sign_in);
+
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(SignInActivity.this);
+        editor = sharedPreferences.edit();
 
         AppCompatButton signinBtn = findViewById(R.id.etSignInBtn);
         AccBtn = findViewById(R.id.tvSignInCheck);
@@ -44,15 +52,16 @@ public class SignInActivity extends AppCompatActivity {
         FirstName = findViewById(R.id.etSignInFirstName);
         LastName = findViewById(R.id.etSignInLastName);
 
-         passwordSignIn.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-             @Override
-             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                 if(isChecked){
-                     password.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
-                 }
-                 else password.setTransformationMethod(PasswordTransformationMethod.getInstance());
-             }
-         });
+        passwordSignIn.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    password.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                } else {
+                    password.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                }
+            }
+        });
 
         signinBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -137,15 +146,27 @@ public class SignInActivity extends AppCompatActivity {
                 }
 
                 if (valid) {
+                    Intent i = new Intent(SignInActivity.this, LoginActivity.class);
+                     editor.putString("First_Name", FirstName.getText().toString());
+                    editor.putString("Last_Name", LastName.getText().toString());
+                    editor.putString("Username", username.getText().toString());
+                    editor.putString("Email", email.getText().toString());
+                    editor.putString("Password", password.getText().toString());
+                    editor.putString("Contact", contact.getText().toString());
+                    editor.commit(); // commit the changes to SharedPreferences
                     Toast.makeText(SignInActivity.this, "Signed In Successfully", Toast.LENGTH_SHORT).show();
-                    jumpLogin();
+        startActivity(i);
+
+
                 }
             }
-                                     });
+        });
 
         AccBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { jumpLogin();}
+            public void onClick(View v) {
+                jumpLogin();
+            }
         });
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.signIn), (v, insets) -> {
@@ -154,9 +175,8 @@ public class SignInActivity extends AppCompatActivity {
             return insets;
         });
     }
+
     private void jumpLogin() {
-        Intent i = new Intent(SignInActivity.this, LoginActivity.class);
-        startActivity(i);
 
     }
 }

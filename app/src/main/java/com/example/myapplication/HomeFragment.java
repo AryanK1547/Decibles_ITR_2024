@@ -396,8 +396,6 @@ loopBtn.setOnClickListener(new View.OnClickListener() {
         hideActionBar(false);
     }
 
-
-    // Similarly, hide/show any other UI elements like menu here if needed
 }
 private void hideActionBar(boolean hide) {
     // Check if the activity is not null

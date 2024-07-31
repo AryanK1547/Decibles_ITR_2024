@@ -3,12 +3,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".BrowseFragment"
-        android:background="@color/black"
->
-
+    android:background="@color/black">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
     <!-- TODO: Update blank fragment layout -->
-     <TextView
+        <LinearLayout
+             android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+              <VideoView android:id="@+id/videoViewRelative"
+         android:layout_width="match_parent"
+         android:layout_height="350dp">
+    </VideoView>
+        </LinearLayout>
+
+   <TextView
              android:id="@+id/tvLoginTitle"
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
@@ -21,5 +34,22 @@
              android:textColor="@color/red"
              android:textStyle="bold"
              android:fontFamily="@font/aclonica"/>
+
+     <com.denzcoskun.imageslider.ImageSlider
+        android:id="@+id/isBrowser_image_slider"
+        android:layout_width="wrap_content"
+        android:layout_height="350dp"
+        app:iss_auto_cycle="true"
+
+        app:iss_delay="1000"
+        app:iss_no_dots="false"
+        app:iss_period="1000"
+        app:iss_selected_dot="@drawable/default_selected_dot"
+        app:iss_text_align="CENTER"
+        app:iss_text_color="@color/white"
+
+        app:iss_unselected_dot="@drawable/default_unselected_dot" />
+
+</LinearLayout>
 
 </FrameLayout>

@@ -23,7 +23,7 @@
     <string name="behtihawasa">Behti Hawa Sa Tha Vo </string>
     <string name="suriliakhiyowale">Surili Akhiyo Wale</string>
 
-     <string name="artistlehraDo">Pritam, Arjit Singh</string>
+    <string name="artistlehraDo">Pritam, Arjit Singh</string>
     <string name="artistsaayiaa">Rahat Fateh Ali Khan</string>
     <string name="artistbehtihawasa">Shaan </string>
     <string name="artistsuriliakhiyowale">Rahat Fateh Ali Khan</string>
@@ -207,4 +207,7 @@ Suna de Zara Akhiyon Se (सुना दे जरा आंखों से)
 Surili Akhiyon Wale (सुरीली आंखों वाले)
 Suna de Zara Akhiyon Se (सुना दे जरा आंखों से)
     </string>
+    <string name="title_activity_video_library">VideoLibrary</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>

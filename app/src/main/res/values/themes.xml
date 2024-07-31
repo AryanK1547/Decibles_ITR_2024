@@ -4,9 +4,9 @@
 
     </style>
 
-    <style name="Theme.MyApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar"/>
+    <style name="Theme.MyApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar" />
 
-    <style name="Theme.MyApplication" parent="Base.Theme.MyApplication"/>
+    <style name="Theme.MyApplication" parent="Base.Theme.MyApplication" />
 
 
     <style name="Theme.ShowAction" parent="Theme.MyApp">
@@ -29,6 +29,18 @@
         <item name="colorAccent">#03DAC5</item>
         <item name="android:textColorPrimary">#FFFFFF</item>
         <item name="android:background">?attr/colorPrimary</item>
+    </style>
+
+    <style name="Theme.MyApplication.Fullscreen" parent="Theme.MyApplication">
+        <item name="android:actionBarStyle">@style/Widget.Theme.MyApplication.ActionBar.Fullscreen
+        </item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+    </style>
+
+    <style name="ThemeOverlay.MyApplication.FullscreenContainer" parent="">
+        <item name="fullscreenBackgroundColor">@color/light_blue_600</item>
+        <item name="fullscreenTextColor">@color/light_blue_A200</item>
     </style>
 
 </resources>

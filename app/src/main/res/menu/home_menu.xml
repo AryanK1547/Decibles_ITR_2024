@@ -4,6 +4,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     >
+       <item
+        android:id="@+id/itHideUI"
+        android:title="QR Code"
+        android:icon="@drawable/open_eye"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/itMenuQRCode"
+        android:title="QR Code"
+        android:icon="@drawable/qr_code_asset"
+        app:showAsAction="always"
+        />
+
+
     <item
         android:id="@+id/itMenuMyLocation"
         android:title="My Location"

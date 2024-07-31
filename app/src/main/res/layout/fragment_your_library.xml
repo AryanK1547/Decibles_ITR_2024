@@ -7,18 +7,14 @@
         android:background="@color/black"
 >
 
-    <!-- TODO: Update blank fragment layout -->
- <TextView
-             android:id="@+id/tvLoginTitle"
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             android:text="Your Library"
-             android:gravity="center"
-             android:textSize="35sp"
-             android:layout_marginBottom="20dp"
-             android:layout_marginTop="20dp"
-             android:textColor="@color/red"
-      android:layout_gravity="center"
-             android:textStyle="bold"
-             android:fontFamily="@font/aclonica"/>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <VideoView android:id="@+id/videoViewRelative"
+         android:layout_width="fill_parent"
+         android:layout_height="fill_parent"/>
+
+
+</RelativeLayout>
+
 </FrameLayout>

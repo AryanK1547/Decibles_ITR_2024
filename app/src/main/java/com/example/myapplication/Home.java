@@ -1,6 +1,8 @@
 package com.example.myapplication;
 
 import android.app.ActivityManager;
+import android.content.Context;
+import android.content.ContextWrapper;
 import android.content.DialogInterface;
 import android.graphics.Color;
 import android.content.Intent;
@@ -29,9 +31,11 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 
+import com.google.android.material.bottomappbar.BottomAppBar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.io.File;
 import java.lang.reflect.Method;
 
 public class Home extends AppCompatActivity implements  BottomNavigationView.OnNavigationItemSelectedListener {
@@ -39,6 +43,8 @@ public class Home extends AppCompatActivity implements  BottomNavigationView.OnN
     SharedPreferences.Editor editor;
     BottomNavigationView bottomNavigationView;
     FloatingActionButton homeBtn;
+     BottomAppBar bottomAppBar;
+
 
 
 
@@ -104,7 +110,23 @@ public class Home extends AppCompatActivity implements  BottomNavigationView.OnN
         else if(item.getItemId()==R.id.itMenuMyLocation){
             Intent i= new Intent(Home.this, MyLocationActivity.class);
             startActivity(i);
+        }
+        else if(item.getItemId()==R.id.itMenuQRCode){
+            Intent i= new Intent(Home.this, QRcodeActivity.class);
+            startActivity(i);
+        }
+        else if(item.getItemId()==R.id.itHideUI){
+                                if (bottomNavigationView.getVisibility() == View.VISIBLE) {
+                            bottomNavigationView.setVisibility(View.GONE);
+                            bottomAppBar.setVisibility(View.GONE);
+                            homeBtn.setVisibility(View.GONE);
 
+                        } else {
+                            bottomNavigationView.setVisibility(View.VISIBLE);
+                            bottomAppBar.setVisibility(View.VISIBLE);
+                            homeBtn.setVisibility(View.VISIBLE);
+
+                        }
         }
         return super.onOptionsItemSelected(item);
     }
@@ -125,8 +147,9 @@ public class Home extends AppCompatActivity implements  BottomNavigationView.OnN
         bottomNavigationView.setSelectedItemId(R.id.itHomeBottomNavSearch);
         bottomNavigationView.setBackground(null);
 
-
+        bottomAppBar=findViewById(R.id.bottomAppBar);
         homeBtn=findViewById(R.id.itfloatingbtnHome);
+
         homeBtn.setBackgroundColor(Color.TRANSPARENT);
 
 
@@ -139,8 +162,7 @@ public class Home extends AppCompatActivity implements  BottomNavigationView.OnN
 
         boolean firsttime = preferences.getBoolean("isFirst",true);
         if (firsttime){
-             showWelcomeAlertBox();
-
+            showWelcomeAlertBox();
             editor.putBoolean("isFirst",false).commit();
         }
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -174,7 +196,7 @@ public class Home extends AppCompatActivity implements  BottomNavigationView.OnN
     }
     public void showLogoutAlertBox(){
          LayoutInflater inflater = getLayoutInflater();
-        View customView = inflater.inflate(R.layout.logout_alertbox, null);
+         View customView = inflater.inflate(R.layout.logout_alertbox, null);
 
         // Create the alert dialog with the custom theme
         AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.MyAlertDialogTheme);
@@ -201,6 +223,7 @@ public class Home extends AppCompatActivity implements  BottomNavigationView.OnN
                 Toast.makeText(Home.this,"Logged-Out Succesfully!!",Toast.LENGTH_SHORT).show();
                 editor.putBoolean("isLogin",false).commit();
                 editor.putBoolean("isFirst",true).commit();
+                  clearProfileImage();
 
             }
         });
@@ -233,7 +256,27 @@ public class Home extends AppCompatActivity implements  BottomNavigationView.OnN
               else if(item.getItemId()== R.id.itHomeBottomNavRadio){
                 getSupportFragmentManager().beginTransaction().replace(R.id.frameLayoutHome,radioFragment).commit();
             }
-            return true;}}
+
+            return true;}
+private void clearProfileImage() {
+    ContextWrapper contextWrapper = new ContextWrapper(getApplicationContext());
+    File directory = contextWrapper.getDir("profileDir", Context.MODE_PRIVATE);
+    File path = new File(directory, "profile.jpg");
+    if (path.exists()) {
+        path.delete();
+    }
+}
+private void hideActionBar(boolean hide) {
+    // Check if the activity is not null
+
+        if (hide) {
+           getSupportActionBar().hide();
+        } else {
+            getSupportActionBar().show();
+        }
+
+}
+}
 
 
 

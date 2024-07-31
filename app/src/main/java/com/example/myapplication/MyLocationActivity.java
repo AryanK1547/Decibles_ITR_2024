@@ -53,7 +53,7 @@ public class MyLocationActivity extends FragmentActivity implements OnMapReadyCa
         mMap = googleMap;
         // Add a marker in Sydney and move the camera
         LatLng barbados = new LatLng(13.120495311230808, -59.60465391887053);
-         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(barbados, 15), 2000, null);
+         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(barbados, 22), 5000, null);
         mMap.addMarker(new MarkerOptions().position(barbados).title("India Lift's World Cup Here").icon(getBitmapDescriptor(R.drawable.departing_asset_map)));//.icon(BitmapDescriptorFactory.fromResource(R.drawable.departing_asset_map)));
         //mMap.moveCamera(CameraUpdateFactory.newLatLng(barbados));
 
